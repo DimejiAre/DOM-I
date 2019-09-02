@@ -79,3 +79,16 @@ document.querySelectorAll(".contact p")[2].textContent = siteContent.contact.ema
 
 // Update Footer
 document.querySelector("footer p").textContent = siteContent.footer.copyright;
+
+// Add new navigation 
+let HomeNavItem = document.createElement('a')
+HomeNavItem.textContent = 'Home'
+
+let logInNavItem = document.createElement('a')
+logInNavItem.textContent = 'Log In'
+
+document.querySelector('nav').prepend(HomeNavItem)
+document.querySelector('nav').appendChild(logInNavItem)
+
+// Update Navigation text color
+document.querySelectorAll('a').forEach((anchor) => anchor.style.color = 'green');
