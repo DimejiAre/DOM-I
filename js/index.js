@@ -98,3 +98,11 @@ document.querySelectorAll('h4').forEach((header) => {
   header.style.color = 'green';
   header.style.fontSize = '24px';
 });
+
+//stretch events
+let button = document.querySelector('button')
+
+button.addEventListener('click', (event)=>{
+  event.target.style.backgroundColor = 'green';
+  event.stopPropagation()
+})
