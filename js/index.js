@@ -48,3 +48,8 @@ let navItemThree = document.querySelectorAll('a')[2].textContent = siteContent.n
 let navItemFour = document.querySelectorAll('a')[3].textContent = siteContent.nav["nav-item-4"]
 let navItemFive = document.querySelectorAll('a')[4].textContent = siteContent.nav["nav-item-5"]
 let navItemSix = document.querySelectorAll('a')[5].textContent = siteContent.nav["nav-item-6"]
+
+// Update Call to Action Section
+document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
+document.querySelector(".cta-text button").textContent = siteContent.cta.button;
+document.querySelector("#cta-img").src = siteContent.cta["img-src"];
