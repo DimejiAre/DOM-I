@@ -61,4 +61,13 @@ document.querySelectorAll(".top-content .text-content h4")[1].textContent = site
 document.querySelectorAll(".top-content .text-content p")[1].textContent = siteContent["main-content"]["about-h4"];
 
 // Update Middle Image
-document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"]
+document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+// Update Bottom Content
+document.querySelectorAll(".bottom-content .text-content h4")[0].textContent = siteContent["main-content"]["services-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[0].textContent = siteContent["main-content"]["services-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[1].textContent = siteContent["main-content"]["product-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[1].textContent = siteContent["main-content"]["product-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[2].textContent = siteContent["main-content"]["vision-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[2].textContent = siteContent["main-content"]["vision-content"];
+
