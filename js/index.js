@@ -77,3 +77,5 @@ document.querySelectorAll(".contact p")[0].textContent = siteContent.contact.add
 document.querySelectorAll(".contact p")[1].textContent = siteContent.contact.phone;
 document.querySelectorAll(".contact p")[2].textContent = siteContent.contact.email;
 
+// Update Footer
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
