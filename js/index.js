@@ -92,3 +92,9 @@ document.querySelector('nav').appendChild(logInNavItem)
 
 // Update Navigation text color
 document.querySelectorAll('a').forEach((anchor) => anchor.style.color = 'green');
+
+// Increase h4 font-size and color
+document.querySelectorAll('h4').forEach((header) => {
+  header.style.color = 'green';
+  header.style.fontSize = '24px';
+});
