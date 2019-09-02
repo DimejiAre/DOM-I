@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -50,7 +50,7 @@ document.querySelectorAll('a')[4].textContent = siteContent.nav["nav-item-5"];
 document.querySelectorAll('a')[5].textContent = siteContent.nav["nav-item-6"];
 
 // Update Call to Action Section
-document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
+document.querySelector(".cta-text h1").innerHTML = siteContent.cta.h1;
 document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 document.querySelector("#cta-img").src = siteContent.cta["img-src"];
 
