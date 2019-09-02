@@ -53,3 +53,9 @@ document.querySelectorAll('a')[5].textContent = siteContent.nav["nav-item-6"];
 document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
 document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 document.querySelector("#cta-img").src = siteContent.cta["img-src"];
+
+// Update Top Content
+document.querySelectorAll(".top-content .text-content h4")[0].textContent = siteContent["main-content"]["features-h4"];
+document.querySelectorAll(".top-content .text-content p")[0].textContent = siteContent["main-content"]["features-content"];
+document.querySelectorAll(".top-content .text-content h4")[1].textContent = siteContent["main-content"]["about-h4"]
+document.querySelectorAll(".top-content .text-content p")[1].textContent = siteContent["main-content"]["about-h4"];
