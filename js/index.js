@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,3 +40,69 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Update anchor tags for nav bar
+document.querySelectorAll('a')[0].textContent = siteContent.nav["nav-item-1"];
+document.querySelectorAll('a')[1].textContent = siteContent.nav["nav-item-2"];
+document.querySelectorAll('a')[2].textContent = siteContent.nav["nav-item-3"];
+document.querySelectorAll('a')[3].textContent = siteContent.nav["nav-item-4"];
+document.querySelectorAll('a')[4].textContent = siteContent.nav["nav-item-5"];
+document.querySelectorAll('a')[5].textContent = siteContent.nav["nav-item-6"];
+
+// Update Call to Action Section
+document.querySelector(".cta-text h1").innerHTML = siteContent.cta.h1;
+document.querySelector(".cta-text button").textContent = siteContent.cta.button;
+document.querySelector("#cta-img").src = siteContent.cta["img-src"];
+
+// Update Top Content
+document.querySelectorAll(".top-content .text-content h4")[0].textContent = siteContent["main-content"]["features-h4"];
+document.querySelectorAll(".top-content .text-content p")[0].textContent = siteContent["main-content"]["features-content"];
+document.querySelectorAll(".top-content .text-content h4")[1].textContent = siteContent["main-content"]["about-h4"]
+document.querySelectorAll(".top-content .text-content p")[1].textContent = siteContent["main-content"]["about-content"];
+
+// Update Middle Image
+document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+// Update Bottom Content
+document.querySelectorAll(".bottom-content .text-content h4")[0].textContent = siteContent["main-content"]["services-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[0].textContent = siteContent["main-content"]["services-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[1].textContent = siteContent["main-content"]["product-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[1].textContent = siteContent["main-content"]["product-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[2].textContent = siteContent["main-content"]["vision-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[2].textContent = siteContent["main-content"]["vision-content"];
+
+// Update Contact
+document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"];
+document.querySelectorAll(".contact p")[0].textContent = siteContent.contact.address;
+document.querySelectorAll(".contact p")[1].textContent = siteContent.contact.phone;
+document.querySelectorAll(".contact p")[2].textContent = siteContent.contact.email;
+
+// Update Footer
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
+
+// Add new navigation 
+let HomeNavItem = document.createElement('a')
+HomeNavItem.textContent = 'Home'
+
+let logInNavItem = document.createElement('a')
+logInNavItem.textContent = 'Log In'
+
+document.querySelector('nav').prepend(HomeNavItem)
+document.querySelector('nav').appendChild(logInNavItem)
+
+// Update Navigation text color
+document.querySelectorAll('a').forEach((anchor) => anchor.style.color = 'green');
+
+// Increase h4 font-size and color
+document.querySelectorAll('h4').forEach((header) => {
+  header.style.color = 'green';
+  header.style.fontSize = '24px';
+});
+
+//stretch events
+let button = document.querySelector('button')
+
+button.addEventListener('click', (event)=>{
+  event.target.style.backgroundColor = 'green';
+  event.stopPropagation()
+})
